@@ -1,0 +1,11 @@
+{
+	"InstallScripts" : 
+	[
+		"D:/COLLEGE/SE/Part-2/backend/build/cmake_install.cmake",
+		"D:/COLLEGE/SE/Part-2/backend/build/_deps/httplib-build/cmake_install.cmake",
+		"D:/COLLEGE/SE/Part-2/backend/build/_deps/json-build/cmake_install.cmake",
+		"D:/COLLEGE/SE/Part-2/backend/build/_deps/tinyxml2-build/cmake_install.cmake",
+		"D:/COLLEGE/SE/Part-2/backend/build/_deps/sqlite3-build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

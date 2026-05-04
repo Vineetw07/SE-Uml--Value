@@ -1,0 +1,256 @@
+{
+  "system": {
+    "name": "NotZomato",
+    "actors": [
+      {
+        "id": "A1",
+        "name": "Customer"
+      },
+      {
+        "id": "A2",
+        "name": "Restaurant"
+      },
+      {
+        "id": "A3",
+        "name": "Rider"
+      },
+      {
+        "id": "A4",
+        "name": "Admin"
+      }
+    ],
+    "useCases": [
+      {
+        "id": "UC1",
+        "name": "Search Food"
+      },
+      {
+        "id": "UC2",
+        "name": "Filter By Mood"
+      },
+      {
+        "id": "UC3",
+        "name": "Manage Cart"
+      },
+      {
+        "id": "UC4",
+        "name": "Place Order"
+      },
+      {
+        "id": "UC5",
+        "name": "Make Payment"
+      },
+      {
+        "id": "UC6",
+        "name": "Track Order"
+      },
+      {
+        "id": "UC7",
+        "name": "Cancel Order"
+      },
+      {
+        "id": "UC8",
+        "name": "Login"
+      },
+      {
+        "id": "UC9",
+        "name": "Manage Profile"
+      },
+      {
+        "id": "UC10",
+        "name": "Group Order"
+      },
+      {
+        "id": "UC11",
+        "name": "Create Subscription"
+      },
+      {
+        "id": "UC12",
+        "name": "Manage Menu"
+      },
+      {
+        "id": "UC13",
+        "name": "Surplus Rescue"
+      },
+      {
+        "id": "UC14",
+        "name": "View Sales Analytics"
+      },
+      {
+        "id": "UC15",
+        "name": "Accept/Reject Order"
+      },
+      {
+        "id": "UC16",
+        "name": "View Route"
+      },
+      {
+        "id": "UC17",
+        "name": "Confirm Delivery"
+      },
+      {
+        "id": "UC18",
+        "name": "Receive order alert"
+      },
+      {
+        "id": "UC19",
+        "name": "View Earning"
+      },
+      {
+        "id": "UC20",
+        "name": "Process Daily Wage Top-Up"
+      },
+      {
+        "id": "UC21",
+        "name": "View Heatmap"
+      },
+      {
+        "id": "UC22",
+        "name": "Manage Users"
+      },
+      {
+        "id": "UC23",
+        "name": "Manage Commission"
+      },
+      {
+        "id": "UC24",
+        "name": "Manage Offers"
+      }
+    ],
+    "relationships": [
+      {
+        "type": "association",
+        "connections": [
+          {
+            "actor": "A1",
+            "useCase": "UC1"
+          },
+          {
+            "actor": "A1",
+            "useCase": "UC3"
+          },
+          {
+            "actor": "A1",
+            "useCase": "UC4"
+          },
+          {
+            "actor": "A1",
+            "useCase": "UC6"
+          },
+          {
+            "actor": "A1",
+            "useCase": "UC8"
+          },
+          {
+            "actor": "A2",
+            "useCase": "UC8"
+          },
+          {
+            "actor": "A2",
+            "useCase": "UC12"
+          },
+          {
+            "actor": "A2",
+            "useCase": "UC14"
+          },
+          {
+            "actor": "A2",
+            "useCase": "UC15"
+          },
+          {
+            "actor": "A3",
+            "useCase": "UC8"
+          },
+          {
+            "actor": "A3",
+            "useCase": "UC16"
+          },
+          {
+            "actor": "A3",
+            "useCase": "UC17"
+          },
+          {
+            "actor": "A3",
+            "useCase": "UC18"
+          },
+          {
+            "actor": "A3",
+            "useCase": "UC19"
+          },
+          {
+            "actor": "A4",
+            "useCase": "UC8"
+          },
+          {
+            "actor": "A4",
+            "useCase": "UC21"
+          },
+          {
+            "actor": "A4",
+            "useCase": "UC22"
+          },
+          {
+            "actor": "A4",
+            "useCase": "UC23"
+          },
+          {
+            "actor": "A4",
+            "useCase": "UC24"
+          }
+        ]
+      },
+      {
+        "type": "include",
+        "connections": [
+          {
+            "base": "UC4",
+            "included": "UC5"
+          },
+          {
+            "base": "UC9",
+            "included": "UC8"
+          }
+        ]
+      },
+      {
+        "type": "extend",
+        "connections": [
+          {
+            "extending": "UC2",
+            "base": "UC1"
+          },
+          {
+            "extending": "UC7",
+            "base": "UC6"
+          },
+          {
+            "extending": "UC11",
+            "base": "UC4"
+          },
+          {
+            "extending": "UC13",
+            "base": "UC12"
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "attachedTo": "UC10",
+        "text": "Order from multiple restaurants at once"
+      },
+      {
+        "attachedTo": "UC13",
+        "text": "50% discount visible after 10pm"
+      },
+      {
+        "attachedTo": "UC17",
+        "text": "Validates via OTP or Photo"
+      },
+      {
+        "attachedTo": "UC20",
+        "text": "If rider received less wage than minimum amount He will be credited extra earning"
+      }
+    ]
+  }
+}

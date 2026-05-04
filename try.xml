@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UseCaseDiagram name="Scholarship Approval System">
+    
+    <Actor id="actor_incharge" name="Scholarship Incharge" type="Primary Actor" />
+    <Actor id="actor_teacher" name="Teacher" type="Secondary Actor" />
+    <Actor id="actor_accounts" name="Accounts Officer" type="Secondary Actor" />
+
+    <SystemBoundary name="Scholarship Management Application">
+        
+        <UseCase id="uc_submit" name="Submit Student Details" />
+        <UseCase id="uc_check_attendance" name="Check Attendance" />
+        <UseCase id="uc_check_fees" name="Check Fees Details" />
+        <UseCase id="uc_grant" name="Grant Scholarship" />
+        
+    </SystemBoundary>
+
+    <Association source="actor_incharge" target="uc_submit" type="Communication" />
+    <Association source="actor_teacher" target="uc_check_attendance" type="Communication" />
+    <Association source="actor_accounts" target="uc_check_fees" type="Communication" />
+    
+    <Include base="uc_grant" inclusion="uc_check_attendance" />
+    <Include base="uc_grant" inclusion="uc_check_fees" />
+
+</UseCaseDiagram>   

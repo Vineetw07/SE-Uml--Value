@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram name="E-Commerce System">
+
+    <Class name="User">
+        <Attribute name="userId: int" />
+        <Attribute name="username: String" />
+        <Attribute name="email: String" />
+        <Attribute name="password: String" />
+        <Method name="login(): boolean" />
+        <Method name="logout(): void" />
+        <Method name="updateProfile(): void" />
+    </Class>
+
+    <Class name="Product">
+        <Attribute name="productId: int" />
+        <Attribute name="name: String" />
+        <Attribute name="price: double" />
+        <Attribute name="stock: int" />
+        <Method name="getDetails(): ProductInfo" />
+        <Method name="updateStock(qty: int): void" />
+    </Class>
+
+    <Class name="Order">
+        <Attribute name="orderId: int" />
+        <Attribute name="orderDate: Date" />
+        <Attribute name="totalAmount: double" />
+        <Attribute name="status: String" />
+        <Method name="placeOrder(): boolean" />
+        <Method name="cancelOrder(): boolean" />
+        <Method name="getInvoice(): Invoice" />
+    </Class>
+
+    <Class name="Cart">
+        <Attribute name="cartId: int" />
+        <Attribute name="items: List" />
+        <Method name="addItem(product: Product): void" />
+        <Method name="removeItem(productId: int): void" />
+        <Method name="calculateTotal(): double" />
+    </Class>
+
+    <Class name="Payment">
+        <Attribute name="paymentId: int" />
+        <Attribute name="amount: double" />
+        <Attribute name="method: String" />
+        <Attribute name="transactionDate: Date" />
+        <Method name="processPayment(): boolean" />
+        <Method name="refund(): boolean" />
+    </Class>
+
+    <Association source="User" target="Cart" type="has" />
+    <Association source="User" target="Order" type="places" />
+    <Association source="Cart" target="Product" type="contains" />
+    <Association source="Order" target="Payment" type="processedBy" />
+    <Dependency source="Order" target="Cart" />
+
+</ClassDiagram>
