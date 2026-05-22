@@ -104,11 +104,11 @@ export const EstimatorFeature: React.FC = () => {
   );
 
   return (
-    <section className="estimator-shell" aria-labelledby="estimator-heading">
-      <div className="workspace-intro">
+    <section className="estimator-shell app-shell" aria-labelledby="estimator-heading">
+      <div className="workspace-intro" style={{ marginBottom: '2rem' }}>
         <div>
           <p className="eyebrow">Diagram intelligence</p>
-          <h2 id="estimator-heading">Turn UML diagrams into a defensible effort and cost estimate.</h2>
+          <h2 id="estimator-heading" style={{ fontSize: '2.5rem', lineHeight: '1.2' }}>Turn UML diagrams into a defensible effort and cost estimate.</h2>
           <p>
             Upload a class or use case diagram, tune project factors, and get a clear model-backed breakdown.
           </p>

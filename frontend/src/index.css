@@ -1,22 +1,32 @@
 :root {
-  --color-primary: #2563eb;
-  --color-primary-hover: #1d4ed8;
-  --color-cyan: #0891b2;
-  --color-green: #059669;
-  --color-ink: #071526;
-  --color-text: #0f2742;
-  --color-text-muted: #60728a;
-  --color-surface: #ffffff;
-  --color-surface-soft: #f7fbff;
-  --color-surface-elevated: #eef6ff;
-  --color-border: #dbe7f5;
-  --color-border-strong: #b8cce3;
-  --color-critical: #dc2626;
-  --color-success: #059669;
-  --bg-main: #eef5fb;
-  --shadow-sm: 0 8px 24px rgb(24 45 72 / 0.08);
-  --shadow-md: 0 20px 60px rgb(24 45 72 / 0.14);
-  --shadow-focus: 0 0 0 4px rgb(37 99 235 / 0.16);
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+  --color-cyan: #22d3ee;
+  --color-green: #10b981;
+  --color-ink: #f8fafc;
+  --color-text: #e2e8f0;
+  --color-text-muted: #94a3b8;
+  --color-surface: #1e293b;
+  --color-surface-soft: #0f172a;
+  --color-surface-elevated: #334155;
+  --color-border: #334155;
+  --color-border-strong: #475569;
+  --color-critical: #ef4444;
+  --color-success: #10b981;
+
+  /* Modern Dark Theme Variables */
+  --bg-primary: #020617;
+  --bg-secondary: #0f172a;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --accent-color: #3b82f6;
+  --accent-hover: #2563eb;
+  --border-color: #1e293b;
+  --bg-main: #020617;
+
+  --shadow-sm: 0 8px 24px rgb(0 0 0 / 0.2);
+  --shadow-md: 0 20px 60px rgb(0 0 0 / 0.4);
+  --shadow-focus: 0 0 0 4px rgb(59 130 246 / 0.3);
   --radius-sm: 6px;
   --radius-md: 8px;
   --radius-lg: 12px;
@@ -32,18 +42,17 @@
 
 html {
   min-width: 320px;
-  background: var(--bg-main);
+  background: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 body {
   min-width: 320px;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background:
-    linear-gradient(180deg, rgb(255 255 255 / 0.72), rgb(255 255 255 / 0) 280px),
-    radial-gradient(circle at 18% 12%, rgb(8 145 178 / 0.08), transparent 28rem),
-    var(--bg-main);
-  color: var(--color-text);
+  background: var(--bg-primary);
+  color: var(--text-primary);
   line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 button,
@@ -153,7 +162,7 @@ p {
   padding: 6px 11px;
   border: 1px solid var(--color-border);
   border-radius: 999px;
-  background: rgb(255 255 255 / 0.76);
+  background: var(--bg-secondary);
   color: var(--color-text-muted);
   font-size: 0.78rem;
   font-weight: 700;
@@ -171,11 +180,11 @@ p {
   justify-content: space-between;
   gap: 20px;
   padding: clamp(22px, 4vw, 38px);
-  border: 1px solid rgb(255 255 255 / 0.82);
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-xl);
   background:
-    linear-gradient(135deg, rgb(255 255 255 / 0.95), rgb(239 249 255 / 0.86)),
-    repeating-linear-gradient(90deg, transparent 0 28px, rgb(37 99 235 / 0.035) 28px 29px);
+    linear-gradient(135deg, var(--bg-secondary), var(--bg-primary)),
+    repeating-linear-gradient(90deg, transparent 0 28px, rgb(59 130 246 / 0.05) 28px 29px);
   box-shadow: var(--shadow-md);
   overflow: hidden;
   position: relative;
@@ -213,7 +222,7 @@ p {
   padding: 12px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  background: rgb(255 255 255 / 0.75);
+  background: var(--bg-secondary);
 }
 
 .workflow-pulse span {
@@ -255,7 +264,7 @@ p {
 .summary-card {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
-  background: rgb(255 255 255 / 0.9);
+  background: var(--bg-secondary);
   box-shadow: var(--shadow-sm);
 }
 
@@ -301,8 +310,8 @@ p {
 }
 
 .status-pill--ready {
-  border-color: rgb(5 150 105 / 0.22);
-  background: rgb(236 253 245);
+  border-color: rgb(16 185 129 / 0.22);
+  background: rgb(16 185 129 / 0.1);
   color: var(--color-green);
 }
 
@@ -316,7 +325,7 @@ p {
   padding: 18px;
   border: 1.5px dashed var(--color-border-strong);
   border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, #ffffff, #f5fbff);
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
   cursor: pointer;
   overflow: hidden;
   transition: transform 220ms var(--ease-out), border-color 220ms ease, background 220ms ease, box-shadow 220ms ease;
@@ -414,8 +423,8 @@ p {
   padding: 11px 12px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  background: white;
-  color: var(--color-ink);
+  background: var(--bg-primary);
+  color: var(--text-primary);
   transition: border-color 180ms ease, box-shadow 180ms ease;
 }
 
@@ -444,7 +453,7 @@ p {
   padding: 16px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  background: #fff;
+  background: var(--bg-secondary);
 }
 
 .factor-card h3 {
@@ -544,8 +553,8 @@ p {
 
 .btn--secondary {
   border: 1px solid var(--color-border);
-  background: white;
-  color: var(--color-text);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
 }
 
 .btn-spinner {
@@ -644,7 +653,7 @@ p {
   min-height: 86px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, #ffffff, #f2f8ff);
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
   animation: shimmer 2.6s ease-in-out infinite;
 }
 
