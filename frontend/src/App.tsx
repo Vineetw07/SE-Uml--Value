@@ -1,5 +1,8 @@
+import { Routes, Route, NavLink } from 'react-router-dom';
 import './index.css';
 import { EstimatorFeature } from './features/Estimator/EstimatorFeature';
+import { About } from './pages/About';
+import { Docs } from './pages/Docs';
 
 function App() {
   return (
@@ -17,14 +20,19 @@ function App() {
           </div>
         </div>
 
-        <div className="topbar-meta" aria-label="Application capabilities">
-          <span>Use Case UCP</span>
-          <span>Class Graph Weight</span>
-        </div>
+        <nav className="topbar-nav" aria-label="Main navigation">
+          <NavLink to="/" end className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Estimator</NavLink>
+          <NavLink to="/about" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>About</NavLink>
+          <NavLink to="/docs" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Docs</NavLink>
+        </nav>
       </header>
 
       <main>
-        <EstimatorFeature />
+        <Routes>
+          <Route path="/" element={<EstimatorFeature />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/docs" element={<Docs />} />
+        </Routes>
       </main>
     </div>
   );
