@@ -73,60 +73,6 @@ p {
   color: var(--color-text-muted);
 }
 
-.app-shell {
-  width: min(1440px, 100%);
-  margin: 0 auto;
-  padding: 24px clamp(16px, 3vw, 40px) 40px;
-}
-
-.topbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 24px;
-  animation: slideDown 620ms var(--ease-out) both;
-}
-
-.brand-lockup {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.brand-mark {
-  width: 48px;
-  height: 48px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 4px;
-  padding: 10px;
-  border-radius: 12px;
-  background: #081b33;
-  box-shadow: 0 12px 30px rgb(8 27 51 / 0.18);
-}
-
-.brand-mark span {
-  border-radius: 999px;
-  background: #8bd6ff;
-  animation: markPulse 2.8s ease-in-out infinite;
-}
-
-.brand-mark span:nth-child(2) {
-  background: #7cf0bd;
-  animation-delay: 180ms;
-}
-
-.brand-mark span:nth-child(3) {
-  background: #ffffff;
-  animation-delay: 360ms;
-}
-
-.topbar h1 {
-  font-size: clamp(1.45rem, 2vw, 2rem);
-  line-height: 1.05;
-}
-
 .eyebrow {
   margin: 0 0 6px;
   color: var(--color-cyan);
@@ -1103,18 +1049,9 @@ p {
 }
 
 @media (max-width: 760px) {
-  .app-shell {
-    padding: 16px 12px 28px;
-  }
-
-  .topbar,
   .workspace-intro {
     align-items: stretch;
     flex-direction: column;
-  }
-
-  .topbar-meta {
-    justify-content: flex-start;
   }
 
   .workspace-intro h2 {
