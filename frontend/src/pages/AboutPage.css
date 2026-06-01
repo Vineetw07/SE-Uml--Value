@@ -1,0 +1,123 @@
+.about-page {
+  display: flex;
+  flex-direction: column;
+  background: #f8fafc;
+  min-height: calc(100vh - 73px - 150px);
+}
+
+.about-header {
+  background: white;
+  padding: 80px 24px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.about-header h1 {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 900;
+  color: #0f172a;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.about-header .lead {
+  font-size: 1.25rem;
+  color: #475569;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  padding: 80px 0;
+}
+
+.method-card {
+  background: white;
+  padding: 48px;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.method-icon-wrap {
+  width: 64px;
+  height: 64px;
+  background: #f1f5f9;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.method-icon {
+  width: 32px;
+  height: 32px;
+  color: #3b82f6;
+}
+
+.method-card h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 24px;
+}
+
+.method-content p {
+  color: #475569;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+}
+
+.method-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.method-content li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.method-content li::before {
+  content: '•';
+  color: #3b82f6;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.method-content strong {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .methodology-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .method-card {
+    padding: 32px 24px;
+  }
+
+  .about-header {
+    padding: 64px 24px;
+  }
+}
