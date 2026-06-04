@@ -1,3 +1,5 @@
+@import './styles/layout.css';
+
 :root {
   --color-primary: #2563eb;
   --color-primary-hover: #1d4ed8;
@@ -20,6 +22,7 @@
   --radius-sm: 6px;
   --radius-md: 8px;
   --radius-lg: 12px;
+  --color-background: #eef5fb;
   --radius-xl: 16px;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }

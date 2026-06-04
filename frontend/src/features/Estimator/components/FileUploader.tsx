@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from 'react';
+import { UploadCloud } from 'lucide-react';
 
 export interface FileUploaderProps {
   onFileSelect: (file: File) => void;
@@ -55,8 +56,8 @@ export const FileUploader: React.FC<FileUploaderProps> = ({ onFileSelect, select
         aria-hidden="true"
         tabIndex={-1}
       />
-      <div className="upload-icon" aria-hidden="true">
-        <span />
+      <div className="upload-icon" aria-hidden="true" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(10, 102, 194, 0.08)', borderRadius: '16px', color: 'var(--color-primary)' }}>
+        <UploadCloud size={28} />
       </div>
       <div>
         {selectedFile ? (
