@@ -1,0 +1,163 @@
+.about-page {
+  width: 100%;
+  background-color: var(--color-surface);
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.about-header {
+  background-color: var(--color-surface-soft);
+  padding: 6rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-icon {
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  color: var(--color-ink);
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.about-header .lead {
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.about-content {
+  padding: 5rem 0;
+}
+
+.methodology-section {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 6rem;
+}
+
+.methodology-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-icon {
+  flex-shrink: 0;
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--color-surface-elevated);
+  color: var(--color-primary);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-body h2 {
+  font-size: 2rem;
+  color: var(--color-ink);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.section-body p {
+  color: var(--color-text);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.section-body strong {
+  color: var(--color-ink);
+}
+
+/* Info Cards */
+.info-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.info-card {
+  background-color: var(--color-surface-soft);
+  border: 1px solid var(--color-border);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+}
+
+.info-card h3 {
+  font-size: 1.15rem;
+  color: var(--color-ink);
+  margin-bottom: 1rem;
+}
+
+.info-card p {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  color: var(--color-text-muted);
+}
+
+/* List Breakdown */
+.list-breakdown {
+  margin-bottom: 2.5rem;
+}
+
+.list-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.list-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.list-item h4 {
+  font-size: 1.15rem;
+  color: var(--color-ink);
+  margin-bottom: 0.5rem;
+}
+
+.list-item p {
+  font-size: 1rem;
+  margin-bottom: 0;
+  color: var(--color-text-muted);
+}
+
+.summary-text {
+  background-color: var(--color-surface-elevated);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--color-primary);
+  font-style: italic;
+  font-size: 1.05rem !important;
+}
+
+@media (max-width: 768px) {
+  .methodology-section {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .info-cards {
+    grid-template-columns: 1fr;
+  }
+}
