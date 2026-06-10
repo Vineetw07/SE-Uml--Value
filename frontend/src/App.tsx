@@ -1,31 +1,24 @@
+import { Routes, Route } from 'react-router-dom';
 import './index.css';
-import { EstimatorFeature } from './features/Estimator/EstimatorFeature';
+import { NavBar } from './components/NavBar';
+import { Footer } from './components/Footer';
+import { Home } from './pages/Home';
+import { EstimatorPage } from './pages/EstimatorPage';
+import { HowItWorks } from './pages/HowItWorks';
+import './App.css';
 
 function App() {
   return (
     <div className="app-shell">
-      <header className="topbar">
-        <div className="brand-lockup">
-          <div className="brand-mark" aria-hidden="true">
-            <span />
-            <span />
-            <span />
-          </div>
-          <div>
-            <p className="eyebrow">Software estimation workspace</p>
-            <h1>UML Value Estimator</h1>
-          </div>
-        </div>
-
-        <div className="topbar-meta" aria-label="Application capabilities">
-          <span>Use Case UCP</span>
-          <span>Class Graph Weight</span>
-        </div>
-      </header>
-
-      <main>
-        <EstimatorFeature />
+      <NavBar />
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/estimator" element={<EstimatorPage />} />
+          <Route path="/how-it-works" element={<HowItWorks />} />
+        </Routes>
       </main>
+      <Footer />
     </div>
   );
 }
