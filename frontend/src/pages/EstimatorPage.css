@@ -1,0 +1,50 @@
+.estimator-page {
+  padding-bottom: 4rem;
+}
+
+.estimator-page-header {
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-bg-base);
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+}
+
+/* Inheriting brand-lockup from existing app styles to maintain Estimator UI consistency */
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.brand-mark {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  width: 32px;
+  height: 32px;
+}
+
+.brand-mark span {
+  background-color: var(--color-primary);
+  border-radius: 2px;
+}
+
+.brand-mark span:nth-child(1) { grid-column: 1 / -1; height: 14px; }
+.brand-mark span:nth-child(2) { height: 14px; }
+.brand-mark span:nth-child(3) { height: 14px; background-color: var(--color-bg-elevated); border: 1px solid var(--color-border); }
+
+.eyebrow {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.brand-lockup h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-text-primary);
+}
