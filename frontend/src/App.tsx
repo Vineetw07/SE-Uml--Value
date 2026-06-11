@@ -1,32 +1,30 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
-import { EstimatorFeature } from './features/Estimator/EstimatorFeature';
+
+// Components
+import { Navbar } from './components/Navbar';
+import { Footer } from './components/Footer';
+
+// Pages
+import { Home } from './pages/Home';
+import { Workspace } from './pages/Workspace';
+import { Methodology } from './pages/Methodology';
 
 function App() {
   return (
-    <div className="app-shell">
-      <header className="topbar">
-        <div className="brand-lockup">
-          <div className="brand-mark" aria-hidden="true">
-            <span />
-            <span />
-            <span />
-          </div>
-          <div>
-            <p className="eyebrow">Software estimation workspace</p>
-            <h1>UML Value Estimator</h1>
-          </div>
-        </div>
-
-        <div className="topbar-meta" aria-label="Application capabilities">
-          <span>Use Case UCP</span>
-          <span>Class Graph Weight</span>
-        </div>
-      </header>
-
-      <main>
-        <EstimatorFeature />
-      </main>
-    </div>
+    <Router>
+      <div className="app-shell">
+        <Navbar />
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/workspace" element={<Workspace />} />
+            <Route path="/methodology" element={<Methodology />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
