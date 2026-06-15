@@ -1,32 +1,47 @@
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import './index.css';
 import { EstimatorFeature } from './features/Estimator/EstimatorFeature';
+import { HomePage } from './pages/HomePage';
+import { AboutPage } from './pages/AboutPage';
 
 function App() {
   return (
-    <div className="app-shell">
-      <header className="topbar">
-        <div className="brand-lockup">
-          <div className="brand-mark" aria-hidden="true">
-            <span />
-            <span />
-            <span />
+    <BrowserRouter>
+      <div className="app-shell">
+        <header className="navbar">
+          <div className="brand-lockup">
+            <div className="brand-mark" aria-hidden="true">
+              <span />
+              <span />
+              <span />
+            </div>
+            <div className="brand-text">
+              <h1>UML Estimator</h1>
+            </div>
           </div>
-          <div>
-            <p className="eyebrow">Software estimation workspace</p>
-            <h1>UML Value Estimator</h1>
-          </div>
-        </div>
 
-        <div className="topbar-meta" aria-label="Application capabilities">
-          <span>Use Case UCP</span>
-          <span>Class Graph Weight</span>
-        </div>
-      </header>
+          <nav className="nav-links">
+            <NavLink to="/" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+              Home
+            </NavLink>
+            <NavLink to="/about" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+              How it works
+            </NavLink>
+            <NavLink to="/workspace" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+              Workspace
+            </NavLink>
+          </nav>
+        </header>
 
-      <main>
-        <EstimatorFeature />
-      </main>
-    </div>
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/workspace" element={<EstimatorFeature />} />
+          </Routes>
+        </main>
+      </div>
+    </BrowserRouter>
   );
 }
 
