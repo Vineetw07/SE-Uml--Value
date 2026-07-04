@@ -1169,3 +1169,10 @@ p {
     transition-duration: 1ms !important;
   }
 }
+
+/* Multi-page specific variables */
+:root {
+  --color-nav-bg: rgba(255, 255, 255, 0.85);
+  --color-nav-border: rgba(0, 0, 0, 0.08);
+  --header-height: 72px;
+}
